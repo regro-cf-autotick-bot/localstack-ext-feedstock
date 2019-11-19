@@ -1,5 +1,5 @@
 {% set name = "localstack-ext" %}
-{% set version = "0.10.64" %}
+{% set version = "0.10.65" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e9bc532560c7fde240c906e34170401d300c657ce964673ba590647f882255e8
+  sha256: 46e91b4634048c72ee99683f7f7272a97d329a3bf357c5468c51c30e72acdddf
 
 build:
   noarch: python
