@@ -1,18 +1,18 @@
 {% set name = "localstack-ext" %}
-{% set version = "0.10.112" %}
+{% set version = "0.10.113" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4aa359aee06f3c5cbc8e8da574d0e7583b3c7ebb55fa4706e503f388b258364c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a5601e418e641aef57163c7169f442644e43580e2c82b6ea356d413457fac9c5
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,13 +30,13 @@ test:
     - localstack_ext.bootstrap
 
 about:
-  home: "https://github.com/localstack/localstack"
-  license: "Apache-2.0"
-  license_family: "APACHE"
-  license_file: "LICENSE.txt"
-  summary: "Extensions for LocalStack"
-  doc_url: "https://pypi.org/project/localstack-ext/"
-  dev_url: "https://github.com/localstack/localstack"
+  home: https://github.com/localstack/localstack
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE.txt
+  summary: Extensions for LocalStack
+  doc_url: https://pypi.org/project/localstack-ext/
+  dev_url: https://github.com/localstack/localstack
 
 extra:
   recipe-maintainers:
